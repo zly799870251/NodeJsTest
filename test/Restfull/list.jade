@@ -11,6 +11,7 @@ html
                 td Name
                 td Age
             each user in JSON.parse(users)
+                - console.log(user);
                 tr
                     td #{user.uid}
                     td #{user.name}
