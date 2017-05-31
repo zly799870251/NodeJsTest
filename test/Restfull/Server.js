@@ -19,7 +19,7 @@ app.get('/',function (req, res) {
 app.get('/user_list',function (req, res) {
     fs.readFile( __dirname + "/users.json", 'utf8', function (err, data) {
         console.log( data );
-        res.render('list',{users:JSON.stringify(data
+        res.render('list',{users:JSON.stringify(data)});
     });
 });
 
