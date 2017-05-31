@@ -1,0 +1,17 @@
+//
+   Created by zhangly on 2017/5/25.
+
+html
+    head
+        title RestfullDemo List
+    body
+        table(border="1",align=center)
+            tr
+                td Uid
+                td Name
+                td Age
+            each user in JSON.parse(users)
+                tr
+                    td #{user.uid}
+                    td #{user.name}
+                    td #{user.age}
