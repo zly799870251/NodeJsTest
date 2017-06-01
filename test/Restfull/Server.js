@@ -62,7 +62,10 @@ app.post('/user_save', urlencodedParser, function (req, res) {
 app.get('/user_remove:id', function (req, res) {
     fs.readFile(__dirname + "/users.json", 'utf8', function (err, data) {
         data = JSON.parse(data);
+
+        // todo 无法继续运行被挂起
         delete data["user" + req.params.id];
+
         console.log(data);
         res.render('list', {users: JSON.stringify(data)});
     });
